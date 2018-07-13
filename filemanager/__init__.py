@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.core.servers.basehttp import FileWrapper
+#from django.core.servers.basehttp import FileWrapper
+from wsgiref.util import FileWrapper  # replaces previous line for django-1.9 compatibility
 from django import forms
 from PIL import Image
 import settings
